@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>For My Writer, Kratika ✨❤️</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Short+Stack&amp;family=Homemade+Apple&amp;display=swap'>
+  <link rel="stylesheet" href="./style.css">
+  
+  <style>
+    #yesButton {
+      padding: 10px;
+      background-color: #e74c3c; /* Love color */
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .paper {
+      margin: 20px;
+      padding: 15px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .paper1 {
+      margin: 20px;
+      padding: 15px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      position: relative;
+    }
+
+    #loveEmojis {
+      font-size: 24px;
+      margin-top: 10px;
+      color: #e74c3c;
+    }
+
+    .paper image img {
+      width: 100%;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+  <!-- A pen by Developer Anurag  -->
+  <div class="paper heart"></div>
+
+  <div class="paper">
+    <p class="p1">Kya aap is pgl dost</p>
+    <p class="p1">ke sath hmesa rahengi?😅</p>
+    <button id="yesButton" onclick="showLove()">Yes!</button>
+  </div>
+
+  <div class="paper image">
+    <p>tm bhut pyariiii i cant explain in words❤️</p>
+    <img src="images/k1.jpg" alt="Image 1" />
+  </div>
+
+  <div class="paper image">
+    <p>Please kbhi jana mt yrrrrrr</p>
+    <img src="images/k2.jpg" alt="Image 2" />
+  </div>
+
+  <div class="paper image">
+    <p>How can someone be so sweettttt ❤️ </p>
+    <img src="images/k3.jpg" alt="Image 3" />
+  </div>
+
+  <div class="paper red">
+    <p class="p1"> Life's vibrant with your friendship. 💖</p>
+  </div>
+
+  <div class="paper">
+    <p class="p1" ontouchstart="playMusicOnTouch()">You r Cutie pie </p>
+    <p class="p1">Amazing <span style="color: red !important;">❤️</span></p>
+  </div>
+
+  <div class="paper image">
+    <p>In a world full of stories,</p>
+    <p>you are the one I want to read again & again📘💖</p>
+    <img src="images/k4.jpg" alt="Image 4" />
+  </div>
+
+
+  <div class="paper image">
+    <img src="images/b7.jpeg" alt="Image 8" />
+  </div>
+
+
+
+  <div class="paper image">
+    <p>They say fairies exist only in stories,</p>
+    <p>But I found mine in real life — it’s you. 🧚‍♀️💗</p>
+    <img src="images/k5.jpg" alt="Image 5" />
+  </div>
+
+
+<div class="paper image">
+  <p>You're the kind of story </p>
+  <p>I never want to end. 💫</p>
+    <img src="images/b2.jpeg" alt="Image 8" />
+  </div>
+
+
+
+  <div class="paper image">
+    <p>you're the writer </p>
+    <p>who heals with her every words💌💕</p>
+    <img src="images/b3.jpeg" alt="Image 6" />
+  </div>
+
+<div class="paper image">
+    <img src="images/b4.jpeg" alt="Image 8" />
+  </div>
+
+<div class="paper image">
+    <img src="images/b8.jpeg" alt="Image 8" />
+  </div>
+
+
+  <div class="paper red">
+    <p class="p1">Your presence will paint my world</p>
+    <p class="p1">with love and warmth. 🌍💞</p>
+  </div>
+
+
+<div class="paper image">
+    <img src="images/b5.jpeg" alt="Image 8" />
+  </div>
+
+
+  <div class="paper">
+    <p class="p1">Tm jo sath ho toh har </p>
+    <p class="p1">din ek fairy tale lgta hai💕📖</p>
+  </div>
+
+  <div class="paper image">
+    <p class="p1">Your laughter is the most poetic verse</p>
+    <p class="p1">in the novel of my life. 💕📔</p>
+    <img src="images/b6.jpeg" alt="Image 7" />
+  </div>
+
+  <div class="paper">
+    <p class="p1">To the girl whose heart writes stories,</p>
+    <p class="p1"> Thanku for being the warmest plot in my life’s novel❤️</p>
+  </div>
+
+  <div class="paper">
+    <p class="p1">You’re a walking poem</p></p>
+    <p class="p1"> with a heart full of stories. 📖💖</p>
+  </div>
+
+  <div class="paper image">
+    <p> Your friendship is poetry to my soul❤️ </p>
+    <img src="images/b1.jpg" alt="Image 8" />
+  </div>
+
+  <div class="paper" id="playMusicButton">
+    <p class="p1">Drag the papers to move!</p>
+    <button class="control-button" id="toggleMusicButton" onclick="toggleMusic()">▶ Play</button>
+    <button class="control-button" onclick="previousSong()">⏮ Previous</button>
+    <button class="control-button" onclick="nextSong()">Next ⏭</button>
+  </div>
+
+  <!-- <script src="./script.js"></script> -->
+  <script src="./mobile.js"></script>
+
+
+  <script>
+    var hasTouched = false;
+    var isMusicPlaying = false;
+    var audio;
+    var currentSongIndex = 0;
+    var songList = ['pia.mp3','sahiba.mp3','baliya.mp3','tuhai.mp3','f1.mp3','song.mp3','s1.mp3', 's2.mp3', 's3.mp3', 's4.mp3', 's5.mp3'];
+  
+    function playMusicOnTouch() {
+      if (!hasTouched) {
+        audio = new Audio(songList[currentSongIndex]);
+        audio.play();
+        hasTouched = true;
+        isMusicPlaying = true;
+        document.getElementById('toggleMusicButton').textContent = 'Pause⏸️';
+  
+        // Event listener to handle the end of the song for looping
+        audio.addEventListener('ended', function () {
+          // Automatically play the next song when the current song ends
+          nextSong();
+        });
+      }
+    }
+  
+    function toggleMusic() {
+      if (isMusicPlaying) {
+        audio.pause();
+        isMusicPlaying = false;
+        document.getElementById('toggleMusicButton').textContent = '▶️ Play';
+      } else {
+        if (!audio) {
+          // If audio is not initialized, start with the first song
+          audio = new Audio(songList[currentSongIndex]);
+        }
+        audio.play();
+        isMusicPlaying = true;
+        document.getElementById('toggleMusicButton').textContent = 'Pause⏸️';
+  
+        // Event listener to handle the end of the song for looping
+        audio.addEventListener('ended', function () {
+          // Automatically play the next song when the current song ends
+          nextSong();
+        });
+      }
+    }
+  
+    function nextSong() {
+      if (audio) {
+        audio.pause();
+      }
+      currentSongIndex = (currentSongIndex + 1) % songList.length;
+      audio = new Audio(songList[currentSongIndex]);
+      audio.play();
+      isMusicPlaying = true;
+      document.getElementById('toggleMusicButton').textContent = 'Pause⏸️';
+    }
+  
+    function previousSong() {
+      if (audio) {
+        audio.pause();
+      }
+      currentSongIndex = (currentSongIndex - 1 + songList.length) % songList.length;
+      audio = new Audio(songList[currentSongIndex]);
+      audio.play();
+      isMusicPlaying = true;
+      document.getElementById('toggleMusicButton').textContent = 'Pause⏸️';
+    }
+
+
+
+
+    function showLove() {
+    alert("You Promised to Rohit U never leave him");
+
+    // Create a new section for the answer and emojis
+    var answerSection = document.createElement("div");
+    answerSection.classList.add("paper1");
+
+    // Add the answer
+    var answerParagraph = document.createElement("p");
+    answerParagraph.innerHTML = "With your 'Yes', my story found its title. 📚<br><br>" +
+  "You’re not just someone I care about...<br>" +
+  "you’re the one I’d highlight in every chapter,<br>" +
+  "and reread a thousand times—just to feel it all again. 💫 Thankuuuuu so muchhhhhh for everything💖";
+    answerSection.appendChild(answerParagraph);
+
+    // Add the love emojis
+    var loveEmojis = document.createElement("div");
+    loveEmojis.innerHTML = "By Rohit💖💕😊";
+    loveEmojis.id = "loveEmojis";
+    answerSection.appendChild(loveEmojis);
+
+    // Append the new section to the body
+    document.body.appendChild(answerSection);
+  }
+  </script>
+</body>
+
+</html>
